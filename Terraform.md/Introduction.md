@@ -3,7 +3,7 @@
 
 ## How does Terraform works?
 Terraform has 2 mains components:
-**1- Terraform code**: Terraform converts the configuration file (script file) in a language that the API of the cloud providers will understand
+**1- Terraform code**: Terraform takes the configuration file you have written, create an API for it and submit the API to the target API of the cloud provider. So Terraform converts the configuration file (script file) in a language that the API of the cloud providers will understand.
 **2- Providers for specific Technologies**:
 
 ## Why Terraform is mostly used in the market?/ Advantages of Terraform
@@ -15,3 +15,17 @@ We have many IAC tools in the market but Terraform is mostly used because, it ca
 - **Standardize configurations** : With terraform, you standardize the way you configure your infrastructure.
 
 ## What is Terraform lifecycle?
+**Step1: Write the configuration files**
+To write your configuration file (terraform project), we just need to:
+- Go to **Terraform Hashicorp** on your browser, 
+- Check the documentation related to the cloud provider of your choice,
+- Select the ressources you need for your configuration. The cloud providers will give you all the detail to write these ressources;
+- Copy the code and change the information
+
+*NB: If you don't find a ressource in the documentation related to your cloud provider, that's mean Terraform doesn't support this ressource*
+**Step2: Plan - Review the changes Terraform will make to your infrastructure**
+Before executing your configuration file, we need to check if it is correct. To do that, Terraform supports a tool called **driden**. With this tool, we can see what will happen with our configuration file and make the necessary adjustments before execution. So, at this step, we use the command **Terraform Plan**
+**Step3: Aplly the changes**
+Terraform provisions your infrastructure and update the state file
+**Step4: Destroy**
+Delete our configuration file
