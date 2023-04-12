@@ -25,7 +25,9 @@ To write your configuration file (terraform project), we just need to:
 *NB: If you don't find a ressource in the documentation related to your cloud provider, that's mean Terraform doesn't support this ressource*
 **Step2: Plan - Review the changes Terraform will make to your infrastructure**
 Before executing your configuration file, we need to check if it is correct. To do that, Terraform supports a tool called **driden**. With this tool, we can see what will happen with our configuration file and make the necessary adjustments before execution. So, at this step, we use the command **Terraform Plan**
+
 **Step3: Aplly the changes**
 Terraform provisions your infrastructure and update the state file
+
 **Step4: Destroy**
 Delete our configuration file
