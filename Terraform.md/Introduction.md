@@ -36,25 +36,4 @@ Delete our configuration file
 
 ## Contents of a Terraform file
 A Terraform file contents at leat the following informations:
-- ***terraform {
--    required _providers***{
--      cloud_provider name = {
--         source = "hashicorp/cloud_provider name"
--         version = "~ 4.16"
--         }
--        }
--     required_version = ">=1.2.0"
--     }
 
--    provider "aws" {
--      region = "us-west-2"
--      }
--     resource "aws_instance" "app_server" {
--     ami               = "ami-830c94e3"
--      instance_type = "t2.micro"
-
-tags = {
-  Name = "Terraform_Demo"
-    }
-   } 
-  
