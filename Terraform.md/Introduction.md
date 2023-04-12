@@ -15,7 +15,9 @@ We have many IAC tools in the market but Terraform is mostly used because, it ca
 - **Standardize configurations** : With terraform, you standardize the way you configure your infrastructure.
 
 ## What is Terraform lifecycle?
-**Step1: Write the configuration files**
+**Step1: Initialise the repository for the Configure file**
+It is important to create a repository where the configuration file will be located
+**Step2:Write the configuration files**
 To write your configuration file (terraform project), we just need to:
 - Go to **Terraform Hashicorp** on your browser, 
 - Check the documentation related to the cloud provider of your choice,
@@ -31,3 +33,28 @@ Terraform provisions your infrastructure and update the state file
 
 **Step4: Destroy**
 Delete our configuration file
+
+## Contents of a Terraform file
+A Terraform file contents at leat the following informations:
+- ***terraform {
+-    required _providers***{
+-      cloud_provider name = {
+-         source = "hashicorp/cloud_provider name"
+-         version = "~ 4.16"
+-         }
+-        }
+-     required_version = ">=1.2.0"
+-     }
+
+-    provider "aws" {
+-      region = "us-west-2"
+-      }
+-     resource "aws_instance" "app_server" {
+-     ami               = "ami-830c94e3"
+-      instance_type = "t2.micro"
+
+tags = {
+  Name = "Terraform_Demo"
+    }
+   } 
+  
