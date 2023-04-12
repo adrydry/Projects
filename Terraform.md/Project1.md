@@ -24,3 +24,9 @@ Paste the path of our terraform executable and click on ok
 When we check the new version of our terraform, we see that we move from terraform **1.3.6  to terraform **1.4.4**
 
 ![new](https://user-images.githubusercontent.com/102819001/231539467-8b9e41c3-588e-4eb3-bffb-f5826d522c5a.png)
+
+**Step 2: Initialise the Terraform repository**
+Import our code from our github repository to our windows CLI by using **git clone url link of the code**. 
+![choco8](https://user-images.githubusercontent.com/102819001/231591928-81cb9df0-a318-4116-adf0-e2c7ff3dba34.png). There are 2 directories: Local state and remote state. Inside the local state we have our **main.tf file**.  We can initialise the repository at this location by using **terraform init** 
+Whatever, we have write in our main.tf, Terraform detects and initialise AWS provider for us.
+![choco1](https://user-images.githubusercontent.com/102819001/231593880-e8bd7f15-1e57-44ef-8f44-fdfd7d492bd2.png)
