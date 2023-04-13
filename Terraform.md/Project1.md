@@ -1,6 +1,7 @@
 ## WRITE OUR FIRST TERRAFORM
 At the end of this project, we will be able to:
 - Install Terraform;
+- Create a Terraform repository
 - How a good Terraform set up look like;
 
 
@@ -30,3 +31,4 @@ Import our code from our github repository to our windows CLI by using **git clo
 ![choco8](https://user-images.githubusercontent.com/102819001/231591928-81cb9df0-a318-4116-adf0-e2c7ff3dba34.png). There are 2 directories: Local state and remote state. Inside the local state we have our **main.tf file**.  We can initialise the repository at this location by using **terraform init** 
 Whatever, we have write in our main.tf, Terraform detects and initialise AWS provider for us.
 ![choco1](https://user-images.githubusercontent.com/102819001/231593880-e8bd7f15-1e57-44ef-8f44-fdfd7d492bd2.png)
+Incase of any change on this terraform file or the state file, we need to reinitialize the repository before executing the related file. 
