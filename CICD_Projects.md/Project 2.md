@@ -34,8 +34,9 @@ They hire a consulting team and based of the differents inputs, they create a so
  ## GCP cloud 
   - Go to your GCP cloud platform and open **cloud Shell**. Cloud shell is a terminal inside GCP cloud
   ![7](https://user-images.githubusercontent.com/102819001/232343889-cb8cbbb4-b785-4b12-a613-771b51407330.png)
-  ![8](https://user-images.githubusercontent.com/102819001/232344274-30f61dda-a8c6-47e3-aeaa-a669d7c02cc3.png)
+   ![8](https://user-images.githubusercontent.com/102819001/232344274-30f61dda-a8c6-47e3-aeaa-a669d7c02cc3.png)
   -  Upload the access key and the Zip files that containts already the .tf file
+  
   ![9](https://user-images.githubusercontent.com/102819001/232344261-dfd22fe9-ee54-4863-841d-f8ee4233b496.png)
   - Verify that the files were uploaded by using the command ls
 ![10](https://user-images.githubusercontent.com/102819001/232344339-cf457793-6afd-40e6-bbe0-a03f1672c1b5.png)
