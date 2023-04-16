@@ -16,7 +16,7 @@ They hire a consulting team and based of the differents inputs, they create a so
  
  **Step 1: Create users in AWS and GCP 
  
- In AWS
+ ## AWS Cloud
  - Go to the console and click on IAM
  ![1](https://user-images.githubusercontent.com/102819001/232342193-e2aa1f91-fd82-44f8-b31b-c2b360b06db8.png)
  
@@ -28,4 +28,12 @@ They hire a consulting team and based of the differents inputs, they create a so
 ![4](https://user-images.githubusercontent.com/102819001/232343583-1733541a-7489-4ef4-b9e1-a2e9ea84ca45.png)
 - Review and create user: Our user is created
 ![5](https://user-images.githubusercontent.com/102819001/232343666-684dc990-791d-485d-8bdd-baa11aa11468.png)
+- Download the .csv file and save in a folder in your desktop
+![6](https://user-images.githubusercontent.com/102819001/232343711-8bd3fee6-a86c-4d7a-ad60-d60d53959113.png)
+  
+ ## GCP cloud 
+  - Go to your GCP cloud platform and open **cloud Shell**. Cloud shell is a terminal inside GCP cloud
+  ![7](https://user-images.githubusercontent.com/102819001/232343889-cb8cbbb4-b785-4b12-a613-771b51407330.png)
+  -  
 
+  
