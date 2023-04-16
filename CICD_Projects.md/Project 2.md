@@ -19,4 +19,13 @@ They hire a consulting team and based of the differents inputs, they create a so
  In AWS
  - Go to the console and click on IAM
  ![1](https://user-images.githubusercontent.com/102819001/232342193-e2aa1f91-fd82-44f8-b31b-c2b360b06db8.png)
+ 
+ - Go to create user and give a name to your user **terraform-en-1
+ ![2](https://user-images.githubusercontent.com/102819001/232343504-93ffcd2e-c9f7-4e35-8ad1-b6d5623742a8.png)
+ - Give a permission to the user :Attach a policy
+ ![3](https://user-images.githubusercontent.com/102819001/232343560-d65d3a98-2bea-4404-8edf-111c9be494f2.png)
+ - Give the aws S3 full access to this user
+![4](https://user-images.githubusercontent.com/102819001/232343583-1733541a-7489-4ef4-b9e1-a2e9ea84ca45.png)
+- Review and create user: Our user is created
+![5](https://user-images.githubusercontent.com/102819001/232343666-684dc990-791d-485d-8bdd-baa11aa11468.png)
 
