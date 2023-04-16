@@ -11,4 +11,12 @@ They hire a consulting team and based of the differents inputs, they create a so
  - **Google container Registry (GCR)**: will be used for our application. the applicastion running in a VM on premise, will be running on top of a containerize architecture (docker image). They will create a docker image that will be saved inside a repository as GRC
  - **Google Kubernetes Engine (GKE)**:  to deploy the application.The application will run inside the Kubernetes Engine cluster. When the application is ready in the k8s cluster, it will be connected to the google cloud SQL;
  - **S3** : was already used by the company to store some files to save money. S3 is just a storage in the AWS cloud, the more you use, the cheaper wu pay. So the company want to continue to take advantage of it. When the receptionist open the application and click on **add guest result**, there is a form she has to fill related to the name, the address of the guest, covid test. The receptionist will scan every test and save in pdf format.All these files on-premises environnement are sitting in the application server. But when the company decided to move to the cloud, they cannot put these files with the application no more. So, with the consulting team, decided to saved all these files in a S3 bucket.   
- Now, we have a **multicloud Infrastructure**.
+ - **Terraform**: The IT manager wants also to make his architecture and application more agile by using Devops features to automation every task. The Consulting team advise to use Terraform to deploy all this environnement. Inside the **tf files**, we will describe what you want to the cloud providers. Terraform will communicate with the API of the cloud provider and the resources will be created. 
+ Now, we have a **multicloud Infrastructure** to deploy.
+ 
+ **Step 1: Create users in AWS and GCP 
+ 
+ In AWS
+ - Go to the console and click on IAM
+ ![1](https://user-images.githubusercontent.com/102819001/232342193-e2aa1f91-fd82-44f8-b31b-c2b360b06db8.png)
+
