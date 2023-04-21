@@ -33,9 +33,10 @@ Now, he is connected to his own account
 
 ![1](https://user-images.githubusercontent.com/102819001/233521602-b04850d4-febe-4e33-913e-6592f562488d.png)
 
-**well done**
+**well done*
 
-To create **access key** for an iam user, choose the users who like to create acces key           
+**NB** If the user don't want to access the Aws console everytime through the link, he can create his own access key and access the console by using this acceskeys credentials
+To create **access key** for an iam user, choose the users who like to create access key           
             
        ![1](https://user-images.githubusercontent.com/102819001/233523427-ec2866c7-06b3-4414-9021-43e1d3947cb7.png)
      
@@ -47,13 +48,21 @@ To create **access key** for an iam user, choose the users who like to create ac
  ![1](https://user-images.githubusercontent.com/102819001/233524135-5f44bbd4-8aba-4253-91eb-4f8f57d70d3b.png)
 and download the .csv file and save in a secure location. Never shared it, even AWS will never ask you your secret key
 
-
+After the access key is downloaded and placed in a secure location, the user can configure AwsCLI.
 **Download the CLI MSI Installer** at https://awscli.amazonaws.com/AWSCLIV2.msi.  The AWSCLI gives you the ability to automate the entire process of controlling and managing AWS services through scripts. In other words, the CLI will help us to take control of our AWS console
   ![1](https://user-images.githubusercontent.com/102819001/233526055-3f0dbe73-c940-4fbd-8e24-70383fbc9ce0.png)
 
 To verify if the AWS CLI is well installed, go to the main menu, open cmd and after the command prompt, use **aws --version**
 
+![1](https://user-images.githubusercontent.com/102819001/233526813-7b728a89-fc9e-4b56-bf0e-291023d740ee.png)
 
+The command **aws configure** and will put all the information related to the acceskey
+![1](https://user-images.githubusercontent.com/102819001/233528508-95afa6a8-315c-4bfb-ac5c-31f064c37e8e.png)
+
+**aws --help** will help you to have more information about aws CLI
+**aws ec2 --help** -----------------------------------------aws EC2
+ 
+ Thanks
 
 
 
