@@ -3,12 +3,14 @@ In this challenge, we will learn AWS by doing some services
 
 ## 1- IAM
 It's not recommended to execute daily tasks with the root account. That's why is important to create differents users to secure the access in the console. Identity Access and Management, this service helps us to create users in our account.
+
+**Creating an administrator IAM user and group**
 In this project, we will create administrator user
 
 ![1](https://user-images.githubusercontent.com/102819001/233518450-d5709ceb-3678-4ba3-9e49-dec67bc7fef5.png)
 
 The user can change this password at next sign-in. Click on Next and set the permissions for this user
-**Create a group and attach give him full access as an aadministrator**
+**Create a group and attach give him full access as an administrator**
 You can add this user to a group
 ![1](https://user-images.githubusercontent.com/102819001/233518691-861e3fd4-0ef7-4327-9860-c457ecbab78e.png)
 
@@ -26,6 +28,7 @@ The new user is created
 You can download the .csv file and send email with the log information to the users
 ![1](https://user-images.githubusercontent.com/102819001/233521138-16842899-75c7-4e37-95bd-70b2ee0709ea.png)
  
+ **Sign in as a new user**
  The new user will use the link to connect to the AWS and he will have to change his password
  ![1](https://user-images.githubusercontent.com/102819001/233521358-22689e25-236c-4657-94e1-330457179036.png)
 
@@ -36,6 +39,8 @@ Now, he is connected to his own account
 **well done*
 
 **NB** If the user don't want to access the Aws console everytime through the link, he can create his own access key and access the console by using this acceskeys credentials
+
+**Create access key**
 To create **access key** for an iam user, choose the users who like to create access key           
             
        ![1](https://user-images.githubusercontent.com/102819001/233523427-ec2866c7-06b3-4414-9021-43e1d3947cb7.png)
@@ -47,6 +52,8 @@ To create **access key** for an iam user, choose the users who like to create ac
  Choose the best practices
  ![1](https://user-images.githubusercontent.com/102819001/233524135-5f44bbd4-8aba-4253-91eb-4f8f57d70d3b.png)
 and download the .csv file and save in a secure location. Never shared it, even AWS will never ask you your secret key
+
+**Install and configure the aws command line interface**
 
 After the access key is downloaded and placed in a secure location, the user can configure AwsCLI.
 **Download the CLI MSI Installer** at https://awscli.amazonaws.com/AWSCLIV2.msi.  The AWSCLI gives you the ability to automate the entire process of controlling and managing AWS services through scripts. In other words, the CLI will help us to take control of our AWS console
