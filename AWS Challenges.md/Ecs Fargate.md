@@ -55,6 +55,10 @@ We will lunch an ECS cluster included a dedicated vpc included an internet gatew
 ![1](https://user-images.githubusercontent.com/102819001/234871452-4ce12b6d-d0f1-4edc-8b35-c527b8160540.png)
 
 **Create an Ecs Fargate task definition**
+Go on ECS on AWS console and create a task definition in json
+![1](https://user-images.githubusercontent.com/102819001/234884438-0623dcd7-c4ad-4b06-919f-cade33a89e0e.png)
+
+![1](https://user-images.githubusercontent.com/102819001/234884751-0cf1f8e0-9d18-4e19-a64b-ab0d8c74dce1.png)
 
 
 **Create an ECS Cluster**
