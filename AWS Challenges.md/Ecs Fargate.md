@@ -62,7 +62,17 @@ Go on ECS on AWS console and create a task definition in json
 
 
 **Create an ECS Cluster**
+On the left of ecs page, click on Cluster and Create a cluster
+![1](https://user-images.githubusercontent.com/102819001/234892225-a897fb30-24de-4389-84b4-7b7a9b886d1c.png)
 
+The new cluster is visible on Cloudformation dashboard
+![1](https://user-images.githubusercontent.com/102819001/234892702-e712c208-2cd3-4ce9-9edb-085654caa7e1.png)
+
+- Go on vpc dashboard. Give the name test_vpc to this vpc
+![1](https://user-images.githubusercontent.com/102819001/234895510-d3371736-92d4-4508-8d3f-93371c760521.png)
+ 
+- Return to cloudformation and check the events. the cluster is created
+ ![1](https://user-images.githubusercontent.com/102819001/234896719-fe100168-e076-4447-ba47-87708674fcab.png)
 
 **Launch the task in the cluster**
 
