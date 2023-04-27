@@ -76,12 +76,13 @@ The new cluster is visible on Cloudformation dashboard
 
 **Launch the task in the cluster**
 
+![1](https://user-images.githubusercontent.com/102819001/234903781-3fd95eb9-e833-48d8-aa0d-bc14d13cf0dd.png)
 
 **Test the application**
 
-
+After the new task is created, take the public ip and check the application on the browser
 
 **View the ressource footprint in cloud formation**
+On cloudformation page, go to events and you see that our no EC2 has been launched. Our application is running servelesss 
 
-
-**Delete the test-cluster, test-vpc and test-task-definition
+**Delete the test-cluster, test-vpc and test-task-definition** to avoid to be billing
