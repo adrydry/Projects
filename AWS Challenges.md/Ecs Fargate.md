@@ -26,8 +26,32 @@ We will lunch an ECS cluster included a dedicated vpc included an internet gatew
 ![1](https://user-images.githubusercontent.com/102819001/234862525-2b5967b7-4faf-46da-88d3-32aba6d6cf42.png)
 
 - Inside the Tester1 folder, create a a text a text file and name it Dockerfile
+-
 ![1](https://user-images.githubusercontent.com/102819001/234863703-ed15ca0b-e5b6-4851-aaae-0e386baefb6f.png)
+ 
+ - Open our Docker file with notepad and Write the syntax of our Docker file. Save and close. Push the code to docker repository
+ 
+ ![1](https://user-images.githubusercontent.com/102819001/234864312-c589dc78-924b-4cdb-954f-6c8e9e98d054.png)
 
+- Install Docker on our laptop : Go to the documentation page of Docker and download the executable file
+
+![1](https://user-images.githubusercontent.com/102819001/234865149-306061bc-b716-4390-9978-0c8e1b70976a.png)
+ - Open Powershell and choose Run ISE as administrator and check if Docker is installed by using docker --version
+ 
+![1](https://user-images.githubusercontent.com/102819001/234865886-bc5010fa-9b8e-4573-8848-f9125b38de22.png)
+
+- Go to the directory where the Dockerfile is located and Build my docker image by using the command **docker build -t hello-fargate .** And pull the image to the docker repository
+
+![1](https://user-images.githubusercontent.com/102819001/234869035-a58678be-88ba-4fba-8d79-a0b2a5e145ec.png)
+
+- Check the avaibility of my image by using **docker images**
+![1](https://user-images.githubusercontent.com/102819001/234870309-6260bfd0-8183-48e3-9399-8a7bd57d9c0e.png)
+
+- Create my container and check the avaibility **docker run -d -p 80:80 image name** and **docker ps -a**
+
+![1](https://user-images.githubusercontent.com/102819001/234867573-2ef93094-eda6-44c3-a7aa-7c7595d3f900.png)
+
+- Let test our application
 
 **Create an Ecs Fargate task definition**
 
