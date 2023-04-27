@@ -1,7 +1,7 @@
 ## PROJECT : DEPLOY A CLOUD NATIVE MONITORING APPLICATION ON KUBERNETES
 
 In this project, we will learn How to build an application and deploy it on kubernetes. For achieve this we will use many tools like:
-- Create a monitoring application in python using Splunk
+- Create a monitoring application in python using flask
 - Containerize the application with Docker: Create the Dockerfile, build the image and run the container locally
 - create a container registry with Amazon ECR using Python, boto3 modules
 - Move to the deployement phase where we will create an Elastic cluster with Amazon EKS,
@@ -32,6 +32,17 @@ These credentials will help you to take control of your console through the AWS 
  Now that, we have everything installed, Let's go to our project
  
  ## STEP1: BUILD OUR APPLICATION
- Go in my home directory and create a new folder
- 
-  
+- Go in my home directory and create a new folder Cloud-native-monitoring. Open this folder through VSC
+![1](https://user-images.githubusercontent.com/102819001/235011552-92d0789b-62a9-4353-966b-f6e41739b37d.png)
+
+ - Write the code for my application with python and the requirements.txt file that contains all the dependencies. 
+  ![1](https://user-images.githubusercontent.com/102819001/234998206-8fb35304-b5f7-48a2-924a-768632628914.png)
+
+- Install all the dependencies by using **pip install -r requirements*
+
+![1](https://user-images.githubusercontent.com/102819001/235011978-bb483e99-e202-451d-80d5-d4d5dae5848f.png)
+
+![1](https://user-images.githubusercontent.com/102819001/235012129-2eca8ff1-4325-4df7-b060-344aa88b2905.png)
+
+
+- Run the application by using 
