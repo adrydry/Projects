@@ -21,6 +21,12 @@ By monday morning, the testers will have the tester application url. Deployment 
 
 We will lunch an ECS cluster included a dedicated vpc included an internet gateway, a couple of public subnet and in one of which, we we launched our ECS fargate task. It will pull our application image from the repository and running as a container. This fargate task will have a private and public IP adress. It will also get a security group to control access. We will leave Port 80, open for internet traffic
 **Save the application image in our dockerhub repository**
+- Go to C disk- search Users/ Administrator - create a folder Tester1 - Inside this folder create a folder src - Inside this folder create the folder html and inside this html folder Create a text file and convert it to a html file. This static file will be use as our web application 
+
+![1](https://user-images.githubusercontent.com/102819001/234862525-2b5967b7-4faf-46da-88d3-32aba6d6cf42.png)
+
+- Inside the Tester1 folder, create a a text a text file and name it Dockerfile
+![1](https://user-images.githubusercontent.com/102819001/234863703-ed15ca0b-e5b6-4851-aaae-0e386baefb6f.png)
 
 
 **Create an Ecs Fargate task definition**
