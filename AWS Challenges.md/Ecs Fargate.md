@@ -51,7 +51,8 @@ We will lunch an ECS cluster included a dedicated vpc included an internet gatew
 
 ![1](https://user-images.githubusercontent.com/102819001/234867573-2ef93094-eda6-44c3-a7aa-7c7595d3f900.png)
 
-- Let test our application
+- Let test our application. Go on the browser and just put **localhost**. The message will appear. Our web application is running. So the docker image passed the test application
+![1](https://user-images.githubusercontent.com/102819001/234871452-4ce12b6d-d0f1-4edc-8b35-c527b8160540.png)
 
 **Create an Ecs Fargate task definition**
 
