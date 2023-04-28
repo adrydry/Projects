@@ -70,11 +70,12 @@ We can now access our application from the browser **localhost:5000**.
 
  ![1](https://user-images.githubusercontent.com/102819001/235016235-1fc5fb95-4ccb-4320-8dce-94a7b312f7c1.png)
 
--Now , we can create our container
+-Now , we can create our container by using **docker run -p 5000:5000 imageid
 
+ ![1](https://user-images.githubusercontent.com/102819001/235048801-f1b3a3f9-5a15-4893-ae5a-efaa5e65e9d7.png)
 
- 
- 
+Now, our application is running inside the container. we can check on the browser localhost:5000
+
  
  
  
