@@ -74,13 +74,35 @@ We can now access our application from the browser **localhost:5000**.
 
  ![1](https://user-images.githubusercontent.com/102819001/235048801-f1b3a3f9-5a15-4893-ae5a-efaa5e65e9d7.png)
 
-Now, our application is running inside the container. we can check on the browser localhost:5000
+Now, our application is running inside the docker container. we can check on the browser localhost:5000
 
+ ## Push our application image in the ECR- Elastic Container Registry
  
- 
- 
- 
- 
+ - Go on AWS console, search for ECR services and create a repository. give the name cloudnativeapp
+ ![1](https://user-images.githubusercontent.com/102819001/235049594-598120f5-1e02-4c3a-b6ea-da26487d4abf.png)
+
+Our ECR is created
+![1](https://user-images.githubusercontent.com/102819001/235049699-f96da8a0-77ba-4e4b-8297-dbf9796c0975.png)
+
+- To push the application image, we open the repository and click on view push commands. Each command need to be execute in the terminal
+ 1- Retrieve an authentication token and authenticate your Docker client to your registry.
+Use the AWS CLI: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 507180652719.dkr.ecr.us-east-1.amazonaws.com 
+
+![1](https://user-images.githubusercontent.com/102819001/235050341-35c821c9-929f-4485-8820-9ec37314b476.png)
+
+2- Build your Docker image using the following command. For information on building a Docker file from scratch see the instructions here . You can skip this step if your image is already built: docker build -t cloudnativeapp
+
+ ![1](https://user-images.githubusercontent.com/102819001/235050585-dc1e3738-8e7d-4706-b71a-93e76614666a.png)
+
+3- After the build completes, tag your image so you can push the image to this repository: docker tag cloudnativeapp:latest 507180652719.dkr.ecr.us-east-1.amazonaws.com/cloudnativeapp:latest
+
+4- Run the following command to push this image to your newly created AWS repository: docker push 507180652719.dkr.ecr.us-east-1.amazonaws.com/cloudnativeapp:latest
+ ![1](https://user-images.githubusercontent.com/102819001/235050868-e0abd6dc-53f7-44f3-819b-a24109874d0b.png)
+
+**Our docker image is now in the ECR**
+
+ ![1](https://user-images.githubusercontent.com/102819001/235051015-3afa29e7-9658-47e0-b378-5fad1fa27cdd.png)
+
  
  
  
