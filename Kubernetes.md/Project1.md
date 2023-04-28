@@ -3,7 +3,7 @@
 In this project, we will learn How to build an application and deploy it on kubernetes. For achieve this we will use many tools like:
 - Create a monitoring application in python using flask
 - Containerize the application with Docker: Create the Dockerfile, build the image and run the container locally
-- create a container registry with Amazon ECR using Python, boto3 modules
+- create a container registry with Amazon ECR using Python, or boto3 modules
 - Move to the deployement phase where we will create an Elastic cluster with Amazon EKS,
 - Deploy our application on k8s. We will create deployment service using python so that our application can be accessed from the internet
 
@@ -103,9 +103,20 @@ Use the AWS CLI: aws ecr get-login-password --region us-east-1 | docker login --
 
  ![1](https://user-images.githubusercontent.com/102819001/235051015-3afa29e7-9658-47e0-b378-5fad1fa27cdd.png)
 
+ ## Create our Kubernetes Cluster with EKS
+ - Create a role to manage the cluster
  
+ ![1](https://user-images.githubusercontent.com/102819001/235051962-88e84102-35dc-4940-a8c9-934bf8813e87.png)
  
+ - On AWS console, search EKS-Elastic kubernetes services and create a cluster. 
  
+ ![1](https://user-images.githubusercontent.com/102819001/235051395-fcee6e97-53b9-427b-9a02-ab6b0febba3f.png)
+
+ 
+Now that my cluster is created, l need to deploy my application on kubernetes
+## Deploy our application on Kubernetes
+
+- First, l need to create my nodes by using **kubectl get pods n- default **
  
  
  
