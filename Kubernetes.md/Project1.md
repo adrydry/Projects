@@ -108,15 +108,28 @@ Use the AWS CLI: aws ecr get-login-password --region us-east-1 | docker login --
  
  ![1](https://user-images.githubusercontent.com/102819001/235051962-88e84102-35dc-4940-a8c9-934bf8813e87.png)
  
- - On AWS console, search EKS-Elastic kubernetes services and create a cluster. 
+ ![1](https://user-images.githubusercontent.com/102819001/235326548-50da358e-b5d3-4f63-a960-3b8f524aa337.png)
+
+ 
+ - On AWS console, search EKS-Elastic kubernetes services and create a cluster and follow the different steps
  
  ![1](https://user-images.githubusercontent.com/102819001/235051395-fcee6e97-53b9-427b-9a02-ab6b0febba3f.png)
-
  
+ ![2](https://user-images.githubusercontent.com/102819001/235326556-e0b1d0f0-4844-477c-bfca-0301550546ce.png)
+
 Now that my cluster is created, l need to deploy my application on kubernetes
+
 ## Deploy our application on Kubernetes
 
-- First, l need to create my nodes by using **kubectl get pods n- default **
+- Check if the cluster just created is active, Create nodes inside the cluster
+![1](https://user-images.githubusercontent.com/102819001/235326667-3817eb84-62af-498a-870a-f9babfa6722b.png)
+
+![1](https://user-images.githubusercontent.com/102819001/235327067-d18a9310-506e-4d7b-bb08-cb6ec2e28b9f.png)
+
+
+
+
+-  l need to create my nodes by using **kubectl get pods n- default **
  
  
  
