@@ -124,6 +124,7 @@ Now that my cluster is created, l need to deploy my application on kubernetes
 - Check if the cluster just created is active, Create nodes inside the cluster
 ![1](https://user-images.githubusercontent.com/102819001/235326667-3817eb84-62af-498a-870a-f9babfa6722b.png)
 
+The node role is created
 ![1](https://user-images.githubusercontent.com/102819001/235327067-d18a9310-506e-4d7b-bb08-cb6ec2e28b9f.png)
 
 
