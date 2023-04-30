@@ -1,18 +1,24 @@
-## PROJECT 1: AUTOMATE CI/CD Pipeline using Jenkins on AWS EC2 instance, Integrate Git, Maven, Tomcat, Terraform
+## PROJECT 1: AUTOMATE CI/CD Pipeline using Jenkins on AWS EC2 instance, Integrate with Git, Maven, Tomcat, Ansible
 
 Jenkins is a CI CD tool that help to automate all activities related to building, testing and deploying Java applications. It's one of the most CICD tool because, it's an open source and can be integrated with multiple others tools. For our project, we will work on AWS cloud platform. To execute this project, we will follow the steps below:
 
-### Step 1: Install Jenkins
+### Step 1: Launch our EC2 instances and connect to the server
 
 **Create an EC2 instance on AWS and name it Jenkins Server**. In this project, we will work with Ubuntu;
+Open the port 8080 on the security group
 
+![1](https://user-images.githubusercontent.com/102819001/235365369-5d81b7f4-d485-40db-9ffa-edacd6b18d7d.png)
+ 
+ Now, we have our Jenkins server
 ![1](https://user-images.githubusercontent.com/102819001/234943363-2e293cbb-ca97-45f8-af7a-9e066a6dc30d.jpg)
 
-**Connect this machine to the server using Gitbash**. We can also use Putty or Mobaxterm as well;
+**Connect to the server using Gitbash**. We can also use Putty or Mobaxterm as well. In this project, we will use Gitbash
+![1](https://user-images.githubusercontent.com/102819001/235365592-72c6cfeb-7f16-48f2-831b-920b051b2139.png)
 
-**Become a root user by execute the command : sudo su -** and **Update the repository: apt-get update -y**;
-![1](https://user-images.githubusercontent.com/102819001/234944373-f42c204f-e73c-4a56-b676-b8e970e50dad.jpg)
+**Become a root user by execute the command : sudo su ** and **Update the repository: apt-get update -y**;
+![1](https://user-images.githubusercontent.com/102819001/235366143-8cd0b08d-70c6-483d-a276-3bb97319a160.png)
 
+## Install Jenkins
 **Install Java**. Java is a prerequisite before any installation of Jenkins. To install java, we must follow some steps:
     - Execute: **apt install default-jdk**  - This command will install directly the compatible version of Java with your OS;
     - Check the installation of Java by using: **java --version**;
