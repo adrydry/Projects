@@ -127,10 +127,20 @@ Now that my cluster is created, l need to deploy my application on kubernetes
 The node role is created
 ![1](https://user-images.githubusercontent.com/102819001/235327067-d18a9310-506e-4d7b-bb08-cb6ec2e28b9f.png)
 
+![1](https://user-images.githubusercontent.com/102819001/235355976-777c64f1-6b88-4066-971a-c4b3433b7dee.png)
+ 
+ - Let us write the yaml file in python.the code can be checked on eks.py. Run the code with py eks.py
+ - let check the pods, the deployments and the service
+
+![1](https://user-images.githubusercontent.com/102819001/235356523-80681cf2-2e18-4721-96b5-0671d2d62b18.png)
+
+- Port forwarding our application. 
+ 
+![1](https://user-images.githubusercontent.com/102819001/235356963-34367d0d-5cd2-4276-b4ff-e022813d917e.png)
+
+Our application is running very well on port 5000
 
 
+ 
+ 
 
--  l need to create my nodes by using **kubectl get pods n- default **
- 
- 
- 
