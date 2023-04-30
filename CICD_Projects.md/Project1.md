@@ -20,11 +20,12 @@ Open the port 8080 on the security group
 
 ## Install Jenkins
 **Install Java**. Java is a prerequisite before any installation of Jenkins. To install java, we must follow some steps:
-    - Execute: **apt install default-jdk**  - This command will install directly the compatible version of Java with your OS;
-    - Check the installation of Java by using: **java --version**;
-    ![1](https://user-images.githubusercontent.com/102819001/234946282-6e42fa54-bbc4-4fb4-8fb6-fde0f396fe23.jpg)
-    
-    - After Java is installed, we need to define the environnement variable of the Java file (JAVA_HOME, PATH). For that, we need to Execute the command : **file $(which java)**. A symbolic link, will appear. The second step is to know where the file is located, execute file + symbolic link**;
+    - Execute: **apt install default-jdk**  - This command will install directly the compatible version of Java with your OS; Check the installation of Java by using: **java --version**;
+    ![1](https://user-images.githubusercontent.com/102819001/235366429-7f18cbe1-3cd8-4f81-a4ed-8fcc7fe91d39.png)
+
+    ![2](https://user-images.githubusercontent.com/102819001/235366445-2976eeb7-fa5b-492e-8d58-b33ffbb44012.png)
+
+    - After the installation of Java, we need to define the environnement variable of the Java file (JAVA_HOME, PATH). For that, we need to Execute the command : **file $(which java)**. A symbolic link, will appear. The second step is to know where the file is located, execute file + symbolic link**;
     - Go to the home directory with cd ~ and execute ls -la to see all the files or directories for the home directory. We will see a file name .bash_profile. Open this file by usind the command vi;
     - Inside the file define Java_Home and the path. Save and quit the file;
     - To verify if the environnement variable is effectively set, just execute first source .bash_profile, and next echo $JAVA_HOME and echo $PATH. 
