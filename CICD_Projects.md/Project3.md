@@ -26,10 +26,35 @@ Incase of any failure of one of this test, we will send notifications to develop
 - So for the Yaml files to be updated with the new image created in the CI, we can use **Argo image updater**. This tool will continuosly monitor the dockerhub or the container registry. And whenever a new image is updated in your registry, Argo image updater will directly update the git repository where the yaml file is located with the new image
 - ArgoCD is constinuosly watching the Git repository where the yaml file is located and whenerver there is a change in this repository, they upload the pod/deploy/service/helmchart yaml and deploy in the k8s cluster. Argocd and Argo image updater are already deploy **inside the k8s cluster** 
 
+## DEPLOY OUR PROJECT
 
-**Step1: Launch our EC2 instances**
+**Launch our EC2 instances**
 We will lunch an Ubuntu Ec2 called **Ultimate-cicd** . Because this server will support many heavy tools, we will launch an ubuntu EC2 with a t2.large capacity
 
 ![1](https://user-images.githubusercontent.com/102819001/236523967-ca00e5ad-0e69-46b5-b5ce-34ef04887b8d.png)
+
+**Connect to the server using gitbash and clone the repository where the Source code is located**
+
+![1](https://user-images.githubusercontent.com/102819001/236577381-cc206cc5-78c9-4a80-9645-20d2c5b128e1.png)
+
+**Install Jenkins**
+Go to the directory where the source code is located
+
+![1](https://user-images.githubusercontent.com/102819001/236578192-32d3f236-8e95-4a5f-ad94-dd24b2b6e35d.png)
+  
+  - Go on Jenkins.io.com and copy te differents commands to install jenkins
+  
+  To verify is jenkins is install, go on the browser and open the localhost with the port 8080. We noticed that it's not possible to reach the jenkins page. We need to verify our inbound traffic on our server to ensure that 8080 is open
+  ![2](https://user-images.githubusercontent.com/102819001/236587065-ef12bb6a-ac4d-4276-ba60-2087babd0720.png)
+  
+- Check the status of jenkins
+
+   ![1](https://user-images.githubusercontent.com/102819001/236587209-514585d1-c4d0-461c-b9a4-ac05d3895a06.png)
+
+now jenkins is accessible on the browser
+![2](https://user-images.githubusercontent.com/102819001/236587275-49f2d0a6-58aa-44bc-8120-b1b2e3fe95d9.png)
+
+
+  
 
 
