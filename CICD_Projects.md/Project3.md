@@ -53,8 +53,44 @@ Go to the directory where the source code is located
 
 now jenkins is accessible on the browser
 ![2](https://user-images.githubusercontent.com/102819001/236587275-49f2d0a6-58aa-44bc-8120-b1b2e3fe95d9.png)
-
-
   
+  - Generate the token to access jenkins
 
+![1](https://user-images.githubusercontent.com/102819001/236589148-50d95e64-b383-4408-b431-d8902919ef40.png)
 
+ - Installed the different plugins and jenkins is ready
+ 
+ ![1](https://user-images.githubusercontent.com/102819001/236589355-b610043a-2d57-49b7-9865-f537195b450d.png)
+
+ **Deploy our pipelines**
+ - Set up the jenkins pipeline   
+ In Jenkins, select new item and click on pipeline. This will facilitate collaboration with the other members of the team
+ 
+ ![1](https://user-images.githubusercontent.com/102819001/236589776-5a0c827a-89fb-4102-9aea-ff83d364c2eb.png)
+
+ To write 2 codes in jenkins, we have 2 differents ways: in the groovy sandbox or Jenkins allows to put directly the jenkins file in the repository where the code source is located. Like this, for any microservices of our application, we can find the code and the jenkins file at the same place
+ 
+ On jenkins, Clck on Advanced projects options, define the pipeline as Pipeline Script for SCM. Paste the git repository Url, specify the branch and add the script path (inside the repository where the jenkins file is located) and save. The jenkins file can be in any location and can be name differently of Jenkinsfile
+ 
+ - Install **Docker pipelines plugins** which contains already Maven
+ 
+ ![1](https://user-images.githubusercontent.com/102819001/236591214-1c9b9cbd-6fbb-4449-899e-bf26d9647146.png)
+
+ - Install Sonarqube
+ Install sonarqube plugins on my jenkins pipelines (**sonarqube scanner**)
+  
+ ![1](https://user-images.githubusercontent.com/102819001/236591437-865d63c9-b754-42fe-b718-11a30b66f735.png)
+
+we have ton install Sonarqube server on my EC2 instance
+- Create the user adduser sonarqube
+![1](https://user-images.githubusercontent.com/102819001/236591727-be4b9a24-f8c5-4a5f-a4ef-791c34de0891.png)
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
