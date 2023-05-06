@@ -85,12 +85,25 @@ we have ton install Sonarqube server on my EC2 instance
 - Create the user adduser sonarqube
 ![1](https://user-images.githubusercontent.com/102819001/236591727-be4b9a24-f8c5-4a5f-a4ef-791c34de0891.png)
 
+- Switch to sonarqube user: sudo su - sonarqube and download sonarqube binaries
+
+ ![1](https://user-images.githubusercontent.com/102819001/236592836-2bf17592-d3a5-4e0e-9a75-bc39c256ae16.png)
+
+ - unzip the folder with **unzip**. 
  
+ ![1](https://user-images.githubusercontent.com/102819001/236593104-02215e5f-f74b-4689-8607-de5aa08df183.png)
  
+![1](https://user-images.githubusercontent.com/102819001/236593723-bf77ec95-7a7d-425f-a520-72d6826f6262.png)
+
+ - Start sonarqube
+ ![1](https://user-images.githubusercontent.com/102819001/236593825-8f6973c9-0279-4375-ac40-d997b6685634.png)
  
- 
- 
- 
- 
+ Sonarqube by default run on 9000 and his default username and password is **admin**. 
+![2](https://user-images.githubusercontent.com/102819001/236593831-bed5dd1a-c0b8-430a-b796-ec3bc03bef68.png)
+
+At the first connection, Sonarqube will require a new password
+
+ ![2](https://user-images.githubusercontent.com/102819001/236594018-7655f213-e7a1-4bc0-bd85-efe4a7d7e7fe.png)
+
  
  
