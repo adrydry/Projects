@@ -106,4 +106,20 @@ At the first connection, Sonarqube will require a new password
  ![2](https://user-images.githubusercontent.com/102819001/236594018-7655f213-e7a1-4bc0-bd85-efe4a7d7e7fe.png)
 
  
+ - create our minikube and start it
  
+ **Instal kubernetes controller**
+ Everytime, you want to install any kubernetes controller, the first thing to do is to install the k8s operator. The operator will manage the lifecycle of the k8s controller. so, incase of any update of the controller version, telemetrics,...we will still uptodate. Also, the operator makes the installation process very easy.
+ 
+ - Install k8s via the operator. Go on operatorhub.io.com . Search Argocd and copy the command for installation
+ 
+ ![1](https://user-images.githubusercontent.com/102819001/236598394-f76d1af2-11de-47b1-8a21-a82b5f562a21.png)
+
+
+
+
+
+
+
+
+
