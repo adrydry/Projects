@@ -79,36 +79,63 @@ To choose Docker as a agent, inside your pipeline, we need to use Docker plugins
  
  ![1](https://user-images.githubusercontent.com/102819001/236591214-1c9b9cbd-6fbb-4449-899e-bf26d9647146.png)
 
- - Install Sonarqube
- Install sonarqube plugins on my jenkins pipelines (**sonarqube scanner**)
+
+ **Install Sonarqube inside my jenkins pipelines**
+
+Go to availaible plugins and install **sonarqube scanner**
   
  ![1](https://user-images.githubusercontent.com/102819001/236591437-865d63c9-b754-42fe-b718-11a30b66f735.png)
 
-we have ton install Sonarqube server on my EC2 instance
-- Create the user adduser sonarqube
-![1](https://user-images.githubusercontent.com/102819001/236591727-be4b9a24-f8c5-4a5f-a4ef-791c34de0891.png)
+**Install Sonarqube server on my EC2 instance**
+Sonarqube will be placed in the same VPC used by the EC2 instances. During this installation, we will using the Public ip adress of the instance but in our company, its recommaneded to use the private instance
 
-- Switch to sonarqube user: sudo su - sonarqube and download sonarqube binaries
+- Create the user adduser sonarqube and Switch to sonarqube user: sudo su - sonarqube and download sonarqube binaries
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/1275fe32-ff27-4b53-851a-c59ab10181b2)
 
- ![1](https://user-images.githubusercontent.com/102819001/236592836-2bf17592-d3a5-4e0e-9a75-bc39c256ae16.png)
+ - Download the sonarqube binaries
+ ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/57935f47-7b61-46af-b8c4-0313582a0986)
 
- - unzip the folder with **unzip**. 
+ - Return as a root user, install **apt install unzip** and unzip the folder with **unzip**. 
+ ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/81316dfc-0f78-48eb-8f34-d0f08a8a4080)
+
+ - Give new permissions to the unzip file
+ chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+ chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
  
- ![1](https://user-images.githubusercontent.com/102819001/236593104-02215e5f-f74b-4689-8607-de5aa08df183.png)
- 
-![1](https://user-images.githubusercontent.com/102819001/236593723-bf77ec95-7a7d-425f-a520-72d6826f6262.png)
-
  - Start sonarqube
- ![1](https://user-images.githubusercontent.com/102819001/236593825-8f6973c9-0279-4375-ac40-d997b6685634.png)
- 
- Sonarqube by default run on 9000 and his default username and password is **admin**. 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/d39f3785-7dcb-4152-8ad1-a956fbede215)
+
+- Verify is Sonarqube is running
+ Sonarqube by default run on 9000. Take the public IPA of our instances and open on the browser. We will notice that the page is not accessible. We have to check our security group and open the port 9000. Now, it's work
+ ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/9eb78e5e-6fc3-4aaa-8510-24c5c9598106)
+
+ - Access the Sonarqube platform
+ By default, the default username and password of Sonarqube is **admin**. 
 ![2](https://user-images.githubusercontent.com/102819001/236593831-bed5dd1a-c0b8-430a-b796-ec3bc03bef68.png)
 
 At the first connection, Sonarqube will require a new password
 
- ![2](https://user-images.githubusercontent.com/102819001/236594018-7655f213-e7a1-4bc0-bd85-efe4a7d7e7fe.png)
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/86526044-3363-4cdf-a75f-366bb45e3562)
 
- 
+- After logging, the system will ask you where you want to deploy your project
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/be8912b1-55ba-443e-95d3-3af50ea3f3ec)
+
+Jenkins is integrate with Docker. Now that Sonarqube is installed, how can it communicate with Jenkins (there are 2 differents applications???
+
+**Integrate Jenkins with Sonarqube**
+
+- Go to Sonarqube, click on My account, Click on Security, and generate a oken for Jenkins
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/65f5a370-a122-4a14-a353-edcdb5920e3e)
+
+- Copy this token, Go to Jenkins, Manage credentials and paste it
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/814cb95e-dd7b-446f-a0ee-e83b50ea563d)
+
+
+
+
+
+
  - create our minikube and start it
  
  **Instal kubernetes controller**
