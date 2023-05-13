@@ -33,19 +33,22 @@ We will lunch an Ubuntu Ec2 called **Ultimate-cicd** . Because this server will 
 
 ![1](https://user-images.githubusercontent.com/102819001/236523967-ca00e5ad-0e69-46b5-b5ce-34ef04887b8d.png)
 
-**Connect to the server using gitbash and clone the repository where the Source code is located**
-
-![1](https://user-images.githubusercontent.com/102819001/236577381-cc206cc5-78c9-4a80-9645-20d2c5b128e1.png)
+**Install Java as a prerequisite for Jenkins**
+sudo apt update
+sudo apt install openjdk-11-jre
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/1ea94ad3-78ea-4fe4-ad3f-7841280d76ab)
 
 **Install Jenkins**
-Go to the directory where the source code is located
+- Go on jenkins.io and select Linux. These are the commands to use to install jenkins on our ubuntu server
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/74c1a676-0784-4d14-a2dc-cd490ea9b8dc)
 
-![1](https://user-images.githubusercontent.com/102819001/236578192-32d3f236-8e95-4a5f-ad94-dd24b2b6e35d.png)
-  
-  - Go on Jenkins.io.com and copy te differents commands to install jenkins
-  
-  To verify is jenkins is install, go on the browser and open the localhost with the port 8080. We noticed that it's not possible to reach the jenkins page. We need to verify our inbound traffic on our server to ensure that 8080 is open
-  ![2](https://user-images.githubusercontent.com/102819001/236587065-ef12bb6a-ac4d-4276-ba60-2087babd0720.png)
+- To verify Jenkins installation, take the public Ip adress of our instance and open it on port 8080. We noticed that the jenkins page is not accessible 
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/4e1505aa-6c9a-4afa-b905-f57bfcbaea22)
+
+- We need to verify our security group. To ensure that the Inbound traffic on port 8080 is open
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/c701e45c-0d35-440a-a6df-66ba42fa9e30)
   
 - Check the status of jenkins
 
@@ -62,16 +65,16 @@ now jenkins is accessible on the browser
  
  ![1](https://user-images.githubusercontent.com/102819001/236589355-b610043a-2d57-49b7-9865-f537195b450d.png)
 
- **Deploy our pipelines**
- - Set up the jenkins pipeline   
- In Jenkins, select new item and click on pipeline. This will facilitate collaboration with the other members of the team
- 
- ![1](https://user-images.githubusercontent.com/102819001/236589776-5a0c827a-89fb-4102-9aea-ff83d364c2eb.png)
+ **First thind to do: Write our pipelines**
+ - **Set up the jenkins pipeline**   
+ In Jenkins, select new item and click on pipeline. This will facilitate collaboration with other members of the team. To write your codes in jenkins, we have 2 differents ways: use the groovy sandbox or paste directly the url of your github repository where the code source is located. Like this, for any microservices of our application, we can find the code and the jenkins file at the same place. Clck on Advanced projects options, define the pipeline as Pipeline Script for SCM. Paste the git repository Url, specify the branch and add the script path (inside the repository where the jenkins file is located) and save. The jenkins file can be in any location and can be name differently of Jenkinsfile
 
- To write 2 codes in jenkins, we have 2 differents ways: in the groovy sandbox or Jenkins allows to put directly the jenkins file in the repository where the code source is located. Like this, for any microservices of our application, we can find the code and the jenkins file at the same place
- 
- On jenkins, Clck on Advanced projects options, define the pipeline as Pipeline Script for SCM. Paste the git repository Url, specify the branch and add the script path (inside the repository where the jenkins file is located) and save. The jenkins file can be in any location and can be name differently of Jenkinsfile
- 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/89749544-08f8-4abe-9ef9-4e516a2bbbe5)
+
+Now, Jenkins understand where is the jenkinsfile. This integration of the jenkinsfile will help us to integrate all the task of the Continuous integration 
+The best way to write a Jenkinsfile is to use Docker as a **agent**. Like this your pipeline will create automatically a container, and whenever a container is created, the configuration will be created and the container will be deleted after the configuration of a deployment. This will help the company to not be charged by AWS. So as soon as, your pipelines is trigger, your pipeline take the responsability to create a docker container, the pipeline will execute all the stages of the jenkins file inside the docker container and when the jenkins file is executed, the docker container is deleted at the end. Like this your ressources are free for other jenkins jobs.
+To choose Docker as a agent, inside your pipeline, we need to use Docker plugins and select a compatible image to write your Dockerfile. This is a responsability of a Devops engineer.
+
  - Install **Docker pipelines plugins** which contains already Maven
  
  ![1](https://user-images.githubusercontent.com/102819001/236591214-1c9b9cbd-6fbb-4449-899e-bf26d9647146.png)
