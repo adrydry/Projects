@@ -75,6 +75,11 @@ Now, Jenkins understand where is the jenkinsfile. This integration of the jenkin
 The best way to write a Jenkinsfile is to use Docker as a **agent**. Like this your pipeline will create automatically a container, and whenever a container is created, the configuration will be created and the container will be deleted after the configuration of a deployment. This will help the company to not be charged by AWS. So as soon as, your pipelines is trigger, your pipeline take the responsability to create a docker container, the pipeline will execute all the stages of the jenkins file inside the docker container and when the jenkins file is executed, the docker container is deleted at the end. Like this your ressources are free for other jenkins jobs.
 To choose Docker as a agent, inside your pipeline, we need to use Docker plugins and select a compatible image to write your Dockerfile. This is a responsability of a Devops engineer.
 
+- How to write a jenkins pipelines
+
+Jenkinsfile is composed of many stages. Theses stages represents the blocks of what you try to build. Any step of our project is a block. so we need one stage for every block. So, in our case:
+Stage 1:
+
  - Install **Docker pipelines plugins** which contains already Maven
  
  ![1](https://user-images.githubusercontent.com/102819001/236591214-1c9b9cbd-6fbb-4449-899e-bf26d9647146.png)
@@ -131,21 +136,43 @@ Jenkins is integrate with Docker. Now that Sonarqube is installed, how can it co
 
 ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/814cb95e-dd7b-446f-a0ee-e83b50ea563d)
 
+So now, my configuration of Sonarqube in Jenkins is done
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/b5744868-8a73-4151-9a20-4460b1eca802)
+ 
+ 
+ **Do the differents tests with Selenium,...**
+ 
+ **Install Docker on my ec2 instances** using the command **sudo apt install docker.io**
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/37d66462-7e27-4435-a529-a2672dbbdf40)
 
+- Give permissions to jenkins and ubuntu to use docker and restart docker. 
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+
+**Restart our Jenkins server**
+After installing all these plugins, it's a best practice to restart the jenkins server. 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/2aa9c312-1d74-4e03-b562-80055a63bf46)
+
+**Create our Minikube**
+
+Minikube is a tool that lets you run k8s locally. It runs a single -node k8s cluster on your personal computer so that you can try k8s for daily work
 
 
  - create our minikube and start it
  
- **Instal kubernetes controller**
- Everytime, you want to install any kubernetes controller, the first thing to do is to install the k8s operator. The operator will manage the lifecycle of the k8s controller. so, incase of any update of the controller version, telemetrics,...we will still uptodate. Also, the operator makes the installation process very easy.
+ **Instal kubernetes controller using operator**
+ Everytime, you want to install any kubernetes controller, the first thing to do is to install the k8s operator. The operator will manage the lifecycle of the k8s controller. so, incase of any update of the controller version, telemetrics of the controller,...we will still up to date. Also, the operator makes the installation process very easy.
  
- - Install k8s via the operator. Go on operatorhub.io.com . Search Argocd and copy the command for installation
+ - Install k8s via the operator. Go on operatorhub.io.com . Search Argocd, click on install and copy the command for installation
  
  ![1](https://user-images.githubusercontent.com/102819001/236598394-f76d1af2-11de-47b1-8a21-a82b5f562a21.png)
 
-
+- Verify the installation of the k8s operator using **kubectl get pods -n operators -w**
+- 
 
 
 
