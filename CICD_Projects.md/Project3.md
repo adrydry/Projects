@@ -78,7 +78,17 @@ To choose Docker as a agent, inside your pipeline, we need to use Docker plugins
 - How to write a jenkins pipelines
 
 Jenkinsfile is composed of many stages. Theses stages represents the blocks of what you try to build. Any step of our project is a block. so we need one stage for every block. So, in our case:
-Stage 1:
+Block 1: The checkout stage. Jenkins will checkout because the jenkins file is located also in the git hub repository. we also need checkout for the webhook
+
+Block 2: Build and test my artifact. This stage will help us to clean and package. The difference between mvn clean package and mvn install : the mvn clean package will find the pom.xl file (list all the dependencies of your application)
+
+Block 3: when your artifact fets generated, a new folder target is created and inside this folder the artifact is located. this step help you to tell to jenkins where is the url of your sonarqube. without this url, jenkins will not be able to send the information to sonarqube server
+
+Block 4: define the credentials to integrate sonarqube url as a credentials in jenkins. the package to execute sonar is mvnsonar:sonar. for this stae, we need, the sonarqube url and the sonarqube token
+
+Block 5: define the docker build and push step. Define the docker credentials to help you push the docker image in the dockerhub
+
+Block 6: update the repository. write a shellscript using the github and docker credential
 
  - Install **Docker pipelines plugins** which contains already Maven
  
@@ -153,6 +163,7 @@ usermod -aG docker jenkins
 usermod -aG docker ubuntu
 systemctl restart docker
 
+Write the differents credentials of docker (Id as docker-cred as define in the jenkinsfile, put your dockerhub username and password)and Github (choose secret text, go to the github, choose settings, developper settings and click on personal access tokens, click on token classic and generate a new token)in jenkins
 **Restart our Jenkins server**
 After installing all these plugins, it's a best practice to restart the jenkins server. 
 ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/2aa9c312-1d74-4e03-b562-80055a63bf46)
@@ -172,7 +183,24 @@ Minikube is a tool that lets you run k8s locally. It runs a single -node k8s clu
  ![1](https://user-images.githubusercontent.com/102819001/236598394-f76d1af2-11de-47b1-8a21-a82b5f562a21.png)
 
 - Verify the installation of the k8s operator using **kubectl get pods -n operators -w**
-- 
+
+**Build our jenkins pipelines**
+our application pass the different stages 
+
+**Use argocd to deploy our application in k8s
+- go to argocd operator documentation - basics. copy the command. 
+- create and open a new yaml file and paste the argocd operator
+- kubectl apply -f argocd-basic.yml
+- kubectl get pods
+- kubectl get svc
+- kubectl edit svc example-argocd-server
+- minikube service argocd-server
+- minikube service list: minikube give you an url that will help you to access your application
+- kubectl get pods. All the pods are up and running
+- copy the link and put in a browser. Argocd is running and we just need to provide the username and password. the username is Admin and fpr the password, go to kubectl get secret and kubectl get secret cluster name. copy the admin password
+- echo password | base 64 -d. copy the password and copy on the argocd page
+- Open the argocd page and click on create an application
+-  
 
 
 
