@@ -103,11 +103,46 @@ Privatesubnet2 and 4 to privateroutetable2
 
 ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/ce6e935e-318a-43e0-91f3-33b580b15014)
 
+Because some data of our application will be store in the private subnet but also need to go to internet to download some libraries, we need to block all incoming access on these private subnets.
+For achieve this functionalities, we need to create to Elastic IP per AZ. Each Elastic IP will be attached to a new Natgateway. Every Natgateway will be attached to the route table.
+
+NB: Natgateway is always created in public subnet
+
+## Create Elastic IP
+Go to Elastic IP, click on allocate Elastic IP, create a tag name
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/c25505f7-4587-47e4-895a-39f28d09e137)
+
+Our 2 EIP are created
+
+## Create Natgateway
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/6dc20b2d-8d39-4c1a-811d-3061d69a3839)
+
+Now, we have to attach each natgateway to the route table
 
 
-Now that we have our internet gateway attach to our route, let's make our public subnet public
+## Attach Nategateway to route table
 
-## 
+Go to Route table and click on edit route and selection the natgateway
+
+Now, we have described the all design of this 3 web architecture on AWS.
+
+## Verify our ressources
+
+We will deploy an EC2 instance with the public and private subnet and check if they can access the internet or not
+
+- Create an IAM ROLE. This role (AmazonEC2RoleforSSM)  will be attached with the ec2 instances. 
+- Create 2 EC2 instance: 1 with privatesubnet 1 and 1 other with privatesubnet2. In this case, we don§t need to have a key pair to ssh these servers.
+- Let's go to **System Manager** , click on run command on your left and choose the command **awsRunshellscript**
+- Go to parameter and write **yum update -y** because we just want our server to be able to go to internet to do some update. 
+- Go to target selection, choose instances manually and selection your EC2 instances.
+- Dont enable s3 and click on run
+
+
+
+
+
 
 
 
