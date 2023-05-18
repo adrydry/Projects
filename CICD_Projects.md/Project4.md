@@ -18,22 +18,38 @@ Go on the EC2 instances and launch the instances :
 - Create a key pair
 - take a t2.medium 
 - Modify the security group: open the port 8080 for Jenkins and 9000 for Sonarqube
-- Go to advanced details and paste all the command related to the installation of Jenkins and docker. We will also install Sonarqube as a Container. 
-- Click on launch instances and our EC2 is successfully created
+- Install Java with **sudo run apt-get update** and **sudo apt install default-jre**
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/9b0adb93-b6f4-419c-8a9d-b3d2e092d952)
 
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/94d87a66-b57f-429b-b2e8-03d5b7a7a144)
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/c65766b2-2d0b-4ffe-8f31-b895995875c0)
 
+Jenkins is accessible on the browser. Open the var file to have the token
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/6c0186c4-7682-4187-846a-8d591ca02955)
 
+## Install Docker
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/b7e616ff-36c2-488c-85ce-c7ba95e25be3)
 
+## Install sonarqube as a container
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/82607100-1c7a-4445-8951-9f9abe413f5c)
 
+Sonarqube is accessible from the browser
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/7a999618-dfbe-430a-bbc5-27fb64386ad1)
+The username and password by default of Sonarqube is admin
 
+## Create our Jenkinspipeline
 
+Go to Jenkins and create a first job for your pipelines
+![image](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/1fa8ce84-848f-4677-bb26-2bd680e360d4)
 
+The url generated will be use in the Jenkinsfile
 
 
 
