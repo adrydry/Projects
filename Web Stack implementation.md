@@ -4,28 +4,9 @@ A **technology Stack** is a set of frameworks and tools used to develop a softwa
 - **LEMP** - Linux, Nginx, MySQL, Php, Perl
 - **MERN** - MongoDB, ExpressJS, ReactJS, NodeJS
 - **MEAN** - Mongodb, ExpressJS, AngularJS, NodeJS
-Web stack implementation refers to the process of setting up and configuring the various technologies and components that form the foundation of a web application or website. It involves selecting and integrating the different layers of software and infrastructure required to deliver a functional and performant web application.
-
-The web stack, also known as the web development stack or the software stack, typically consists of the following layers:
-
-Client-Side Technologies: This layer includes the technologies that run in a user's web browser and handle the presentation and user interaction. It often involves HTML (Hypertext Markup Language) for structure, CSS (Cascading Style Sheets) for styling, and JavaScript for client-side scripting and interactivity.
-
-Web Application Framework: The web application framework provides a standardized way to build and organize web applications. It often includes libraries, tools, and reusable components that simplify common web development tasks, such as routing, database interaction, and user authentication. Popular web application frameworks include Django (Python), Ruby on Rails (Ruby), Laravel (PHP), and ASP.NET (C#).
-
-Server-Side Programming Languages: The server-side programming language is responsible for processing user requests, handling business logic, and generating dynamic web content. Common server-side languages include Python, Ruby, PHP, Java, and C#. The choice of programming language often depends on factors such as developer expertise, performance requirements, and ecosystem support.
-
-Web Server: The web server is responsible for receiving and processing incoming HTTP requests from clients (browsers) and returning the appropriate responses. Popular web servers include Apache HTTP Server, Nginx, Microsoft IIS, and Node.js (which can function both as a web server and a server-side JavaScript runtime).
-
-Database: Web applications often require persistent storage for managing and retrieving data. The choice of database depends on factors such as scalability, data modeling requirements, and performance considerations. Relational databases like MySQL, PostgreSQL, and Oracle are commonly used, as well as NoSQL databases like MongoDB, CouchDB, and Redis.
-
-Operating System and Infrastructure: The web stack runs on top of an operating system, which can be Linux, Windows, or macOS. Additionally, the infrastructure may include other components like load balancers, caching servers, content delivery networks (CDNs), and deployment tools to ensure scalability, performance, and reliability.
+Web stack implementation refers to the process of setting up and configuring the various technologies and components that form the foundation of a web application or website. It involves selecting and integrating the different layers of software and infrastructure required to deliver a functional and performant web application. 
 
 Web stack implementation involves installing and configuring the necessary software components, setting up the database, configuring web servers, and writing code using the selected web application framework and programming language. It also involves optimizing the performance, security, and scalability of the web application, as well as testing and debugging to ensure its proper functionality.
-
-Different web stack configurations can be chosen based on specific requirements. For example, a popular web stack combination is LAMP (Linux, Apache, MySQL, PHP/Python/Perl), where Linux is the operating system, Apache is the web server, MySQL is the database, and PHP, Python, or Perl is the server-side programming language.
-
-In summary, web stack implementation refers to the process of setting up and integrating the different layers of software and infrastructure required to develop and deploy a web application. It involves carefully selecting and configuring the components that form the foundation of the application, ultimately determining its functionality, performance, and user experience.
-
 
 
 In this project, we will implement the **LAMP** on AWS
