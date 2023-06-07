@@ -16,7 +16,7 @@ with the contents.
 - **Amazon Certificate Manager**: AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications. The most common application of this kind is a secure public website with significant traffic requirements. ACM also simplifies security management by automating the renewal of expiring certificates. So, the ACM is a service that lets you easily manage and deploy SSL/TLS certificate for your websites and applications. With ACM, we have https which is more secure for our application than http.
 
 
-## Step 1: Connect to our EC2 instances and create a S3 bucket
+## Step 1: Connect to our AWS Console and create a S3 bucket
 
 
 
