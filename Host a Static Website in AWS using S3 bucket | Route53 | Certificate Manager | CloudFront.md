@@ -16,41 +16,52 @@ with the contents.
 - **Amazon Certificate Manager**: AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications. The most common application of this kind is a secure public website with significant traffic requirements. ACM also simplifies security management by automating the renewal of expiring certificates. So, the ACM is a service that lets you easily manage and deploy SSL/TLS certificate for your websites and applications. With ACM, we have https which is more secure for our application than http.
 
 
-## Step 1: Connect to our AWS Console and create a S3 bucket
+## Step 1: Connect to our AWS Console, create a S3 bucket
+
+Give a name to the S3 bucket and make it public
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/1567a466-fcb2-4a17-a58e-6fd9e4677081)
+
+## Step 2: Host a website inside the S3 bucket
+
+We can use our own domain name but for the purpose of this project, we will use a free website template of https://www.free-css.com/free-css-templates/page291/hightech. Download the content of this website and save it. Click on the new S3 bucket and upload the folder or the files contents of your website
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/c7a4e00d-ac6e-417f-b786-ba705a55cbb1)
 
 
+## Step 3: Enable the host static of this website
+
+- Go on propertiess
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/79d05e4a-859e-47f0-87d6-0bd80e65e630)
+
+- Scroll down and click on **static website hosting**, edit and select enable
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/8d84fd80-5f97-462a-a959-bffdf32219ef)
+
+## Define the entrypoint of our website/ the default page
+
+After enabling Stati website hosting, go to index document and give the name index.html. Save all changes
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/b001096f-f79f-4c7f-96d1-291584425ae7)
+
+At the end of the page, we have the url of our s3 bucket
+
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/9aba66d4-60fa-46bd-bec3-96d63fdddc6f)
 
 
+## Access our s3 bucket from the browser
 
+Take the url of the s3 bucket and paste in the browser
 
+![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/5134354f-9153-46b6-8b4c-1a0b6c1bdd5e)
 
+We noticed that we cannot access our website
 
+## 
+Even if we have make our content public, we are not able to access our website from the browser. To troubleshoot that, we need to verify that
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Go 
 
 
 
