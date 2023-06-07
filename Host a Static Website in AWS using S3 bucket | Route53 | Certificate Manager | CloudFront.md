@@ -14,3 +14,44 @@ with the contents.
 - **Amazon cloudfront**: is a content delivery Network (CDN) offered by AWS. It speeds up distribution of your static and dynamic web content, such as .html, .css, .js, and image files, videos, and API to the end users. CloudFront delivers your content through a worldwide network of data centers called edge locations. When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance. If the content is already in the edge location with the lowest latency, CloudFront delivers it immediately. If the content is not in that edge location, CloudFront retrieves it from an origin that you've defined—such as an Amazon S3 bucket, a MediaPackage channel, or an HTTP server (for example, a web server) that you have identified as the source for the definitive version of your content.
 
 - **Amazon Certificate Manager**: AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications. The most common application of this kind is a secure public website with significant traffic requirements. ACM also simplifies security management by automating the renewal of expiring certificates. So, the ACM is a service that lets you easily manage and deploy SSL/TLS certificate for your websites and applications. With ACM, we have https which is more secure for our application than http.
+
+
+## Step 1: Connect to our EC2 instances and create a S3 bucket
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
