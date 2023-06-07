@@ -3,7 +3,7 @@ In this project, we will learn how to host a static website in AWS using S3 buck
 ![1](https://github.com/adrydry/Cloud_Devops_Projects2023/assets/102819001/ca27871d-b90c-44c4-a601-b2e727849d01)
 
 
-**Description of the Architecture of the project**: When a user acces a website, it should be resolved to an endpoint fron Route 53. The endpoint will redirect to the cloudfront to rebalance the global audience and reduce the latency and give a better user experience to customers. The certificate manager will be issued the website to use https protocolinstead of http which will actually make the website more secure and lastly, cloudfront will reach out to AWS s3 to serve users 
+**Description of the Architecture of the project**: When a user acces a website, it should be resolved to an endpoint from Route 53. The endpoint will redirect to the cloudfront to rebalance the global audience and reduce the latency and give a better user experience to customers. The certificate manager will be issued the website to use https protocolinstead of http which will actually make the website more secure and lastly, cloudfront will reach out to AWS s3 to serve users 
 with the contents.
 
 **AWS Services to use for this project** :
